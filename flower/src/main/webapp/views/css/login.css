@@ -1,0 +1,710 @@
+@charset "utf-8";
+.iconfont {
+  vertical-align: middle;
+}
+.text-bold {
+  font-size: 12px;
+  color: #ff734c;
+  font-weight: 500;
+}
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #232628;
+  font-family: "Microsoft Yahei";
+  -webkit-tap-highlight-color: transparent;
+}
+body.overflow-hidden {
+  overflow: hidden;
+}
+div,
+ul,
+ol,
+dl,
+p,
+pre,
+section,
+article,
+aside,
+li,
+nav,
+input,
+textarea,
+span,
+label {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+input,
+textarea,
+select {
+  outline: none;
+}
+input::-webkit-autofill,
+textarea::-webkit-autofill,
+select::-webkit-autofill {
+  background-color: transparent;
+  background-image: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+ul,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -webkit-focus-ring-color: transparent;
+}
+i,
+em,
+strong {
+  font-style: normal;
+}
+.iconfont {
+  font-size: inherit;
+}
+.navigation {
+  display: block;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-overflow-line2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.text-overflow-line3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+body .layui-layer {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+body .layui-layer .layui-layer-title {
+  height: 36px;
+  background: transparent;
+  border: none;
+}
+body .layui-layer .layui-layer-content {
+  width: 100%;
+  height: 495px;
+  overflow: hidden;
+}
+body .layui-layer .layui-layer-content .layer-login-modal {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.delivery-city {
+  float: none;
+  display: block;
+  margin-top: 0;
+}
+.delivery-city .csqh {
+  display: block;
+  font-size: 26px;
+  color: #444;
+  margin-left: 240px;
+  line-height: 64px;
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  border: 1px solid #E9ECF0;
+  border-radius: 2px;
+  font-size: 0;
+}
+.input-box span.icon {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background-image: url("https://img02.hua.com/pc/assets/img/pc_icon.png");
+  background-repeat: no-repeat;
+}
+.input-box span.icon-iphone {
+  background-position: -88px -24px;
+}
+.input-box span.icon-message {
+  background-position: 0 -24px;
+}
+.input-box span.icon-unlocked {
+  background-position: -44px -24px;
+}
+.input-box span.icon-email {
+  background-position: -132px -24px;
+}
+.input-box input {
+  width: 262px;
+  height: 34px;
+  padding: 7px 6px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px;
+  color: #232628;
+}
+.input-box input::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #B4BABF;
+}
+.input-box input::-moz-placeholder {
+  font-size: 12px;
+  color: #B4BABF;
+}
+.input-box input:-ms-input-placeholder {
+  font-size: 12px;
+  color: #B4BABF;
+}
+.input-box input::-ms-input-placeholder {
+  font-size: 12px;
+  color: #B4BABF;
+}
+.input-box input::placeholder {
+  font-size: 12px;
+  color: #B4BABF;
+}
+.input-box input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  border: none !important;
+  height: 34px!important;
+  line-height: 20px!important;
+  border-radius: 0;
+}
+.input-box div.cover-pwd {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 34px;
+  width: 262px;
+  height: 34px;
+  padding: 7px 6px;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px;
+  color: #B4BABF;
+  background: #fff;
+}
+.input-box .get-code,
+.input-box #prompt_info,
+.input-box #prompt_einfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: 100%;
+  font-size: 12px;
+  text-align: center;
+  line-height: 34px;
+}
+.input-box .get-code {
+  background: #E9ECF0;
+  color: #232628;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+}
+.input-box #prompt_info,
+.input-box #prompt_einfo {
+  background: #DADDDF;
+  color: #71797F;
+}
+.form-btn {
+  width: 100%;
+  height: 36px;
+  margin-top: 10px;
+  border-radius: 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-btn {
+  background: #FF734C;
+  color: #fff;
+}
+.form-tip {
+  margin-top: 12px;
+  color: #B4BABF;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+}
+.form-tip .pwd-forget {
+  color: #71797F;
+}
+.tips {
+  display: block;
+  padding-left: 40px;
+  height: 18px;
+  margin: 4px 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FF734C;
+}
+.verify-box {
+  display: none;
+}
+.verify-box .verify {
+  padding-left: 12px;
+  width: 214px;
+}
+.verify-box a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: 34px;
+}
+.verify-box img {
+  width: 100%;
+  height: 100%;
+}
+.verify-box .tips {
+  padding-left: 12px;
+}
+.bottom-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  background: #F7F9FA;
+  line-height: 52px;
+}
+.bottom-box-back {
+  display: none;
+  padding-left: 24px;
+  font-size: 14px;
+  line-height: 52px;
+  color: #232628;
+}
+.bottom-box-back:hover {
+  color: #232628;
+}
+.bottom-box i.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  margin-right: 4px;
+  background-image: url("https://img02.hua.com/pc/assets/img/pc_icon.png");
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+.bottom-box i.icon-QQ {
+  background-position: -30px -94px;
+}
+.bottom-box i.icon-zhifubao {
+  background-position: -60px -94px;
+}
+.bottom-box i.icon-weixin {
+  background-position: 0 -94px;
+}
+.bottom-box i.icon-youxiang {
+  background-position: -90px -94px;
+}
+.bottom-box i.icon-arrow-right-active {
+  background-position: 0 -66px;
+}
+.bottom-box i.icon-arrow-right {
+  background-position: -52px -66px;
+}
+.bottom-box i.icon-arrow-left-active {
+  background-position: -86px -66px;
+}
+.bottom-box i.icon-arrow-left {
+  background-position: -26px -66px;
+}
+.login-box {
+  width: 360px;
+  position: relative;
+}
+.login-box.login-modal {
+  height: 374px;
+}
+.login-box.login-modal .login-form {
+  padding-top: 0;
+}
+.login-box .login-tabs {
+  position: relative;
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px solid #E9ECF0;
+  padding: 0;
+  font-size: 0;
+}
+.login-box .login-tabs li {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  line-height: 56px;
+  font-size: 18px;
+  text-align: center;
+  color: #232628;
+  cursor: pointer;
+}
+.login-box .login-tabs li.active {
+  color: #FF734C;
+}
+.login-box .login-tabs li.active::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  bottom: 0px;
+  left: 30px;
+  background: #FF734C;
+}
+.login-box .login-tabs li .wxqr {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 0;
+  right: 0;
+}
+.login-box .login-form {
+  min-height: 280px;
+  padding: 20px 24px 0;
+}
+.login-box .login-form-title {
+  font-size: 16px;
+  line-height: 40px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.login-box .login-form-box-toggle {
+  font-size: 13px;
+  color: #71797F;
+  height: 24px;
+  line-height: 18px;
+  text-align: right;
+  vertical-align: top;
+}
+.login-box .login-form-box-toggle a {
+  display: inline-block;
+  color: #71797F;
+}
+.login-box .login-form-nonmember {
+  margin-top: 16px;
+  text-align: center;
+}
+.login-box .login-form-nonmember a {
+  color: #232628;
+  font-size: 14px;
+}
+.login-box .login-form.login-form-wx .qrcode-box {
+  margin-top: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-img {
+  position: relative;
+  width: 152px;
+  height: 152px;
+  margin: 26px auto 0;
+  border: 1px solid #E9ECF0;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-img img {
+  width: 100%;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-img i {
+  position: absolute;
+  background-color: #fff;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-img .layer-bt {
+  top: -1px;
+  left: 28px;
+  width: 95px;
+  height: 1px;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-img .layer-bb {
+  bottom: -1px;
+  left: 28px;
+  width: 95px;
+  height: 1px;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-img .layer-bl {
+  left: -1px;
+  top: 28px;
+  width: 1px;
+  height: 95px;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-img .layer-br {
+  right: -1px;
+  top: 28px;
+  width: 1px;
+  height: 95px;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-text {
+  position: relative;
+  font-size: 14px;
+  color: #232628;
+  line-height: 24px;
+  margin-top: 30px;
+  vertical-align: top;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-text .mini-icon {
+  margin-left: 4px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.login-box .login-form.login-form-wx .qrcode-box .qrcode-text .pop-tips {
+  display: none;
+  position: absolute;
+  top: -30px;
+  right: 16px;
+  width: 162px;
+  height: 30px;
+  font-size: 10px;
+  line-height: 24px;
+  background-image: url("https://img02.hua.com/pc/assets/img/pc_icon.png");
+  background-repeat: no-repeat;
+  background-position: 0 -124px;
+}
+.login-box .login-form.login-form-pwd {
+  display: none;
+}
+.login-box .login-form.login-form-phone {
+  display: none;
+}
+.login-box .other-login-ways {
+  margin-top: 0px;
+  padding: 0 8px;
+  font-size: 0;
+  vertical-align: top;
+  max-height: 100%;
+}
+.login-box .other-login-ways li {
+  vertical-align: top;
+}
+.login-box .other-login-ways .login-way {
+  display: inline-block;
+  margin: 0 16px;
+  text-align: center;
+  line-height: 52px;
+  height: 52px;
+}
+.login-box .other-login-ways .login-way a {
+  display: inline-block;
+  height: 52px;
+}
+.login-box .other-login-ways .login-way span {
+  font-size: 12px;
+  color: #71797F;
+}
+.login-box .other-login-ways .extra-r {
+  float: right;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #FF734C;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.login-box .other-login-ways .extra-l {
+  padding-right: 16px;
+  font-size: 14px;
+  color: #232628;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.login-box .other-login-ways .extra-l a:hover,
+.login-box .other-login-ways .extra-l a:focus {
+  color: #232628;
+}
+i.mini-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  margin-right: 3px;
+  background-image: url("https://img02.hua.com/pc/assets/img/pc_icon.png");
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+i.mini-icon.icon-info {
+  background-position: -47px 0;
+}
+i.mini-icon.icon-unlocked {
+  background-position: -24px 0;
+}
+i.mini-icon.icon-message {
+  background-position: 0 0;
+}
+i.mini-icon.icon-question {
+  background-position: -72px 0;
+}
+.geetest_wind.geetest_panel .geetest_panel_ghost {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+}
+img {
+  width: auto;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.footer-nav a {
+  color: #737373;
+}
+.login-wrapper {
+  
+  width: 100%;
+  height: 450px;
+  background-image: url('../imgs/flower/VCG41N1221007513.webp');
+  background-size: cover;
+  background-position: 100 0;
+  background-repeat: no-repeat;
+}
+.login-wrapper .container {
+  width: 1220px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.login-wrapper .container .login-box {
+  position: relative;
+  height: 438px;
+  border-radius: 8px;
+  float: right;
+  background: #fff;
+  margin-top: 18px;
+  overflow: hidden;
+}
+.login-box .login-form.register-form-tel {
+  display: block;
+}
+.login-box .login-form.register-form-mail {
+  display: none;
+}
+.login-box #register-phone .pwd-box {
+  margin-bottom: 4px;
+}
+.login-box #register-mail .pwd-box {
+  margin-bottom: 4px;
+}
+body .layui-layer {
+  border-radius: 12px;
+}
+body .layui-layer .layui-layer-title {
+  height: 32px;
+}
+body .layui-layer .layui-layer-content {
+  height: auto;
+}
+body .layui-layer .layui-layer-content #pop-success {
+  text-align: center;
+}
+body .layui-layer .layui-layer-content #pop-success .icon-success {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url("https://img02.hua.com/pc/assets/img/pc_icon.png");
+  background-repeat: no-repeat;
+  background-position: 0 -193px;
+}
+body .layui-layer .layui-layer-content #pop-success .pop-title {
+  font-size: 22px;
+  color: #232628;
+  line-height: 44px;
+}
+body .layui-layer .layui-layer-content #pop-success .pop-content {
+  padding: 0 28px;
+}
+body .layui-layer .layui-layer-content #pop-success .pop-content p {
+  font-size: 14px;
+  color: #71797F;
+  line-height: 20px;
+}
+body .layui-layer .layui-layer-content #pop-success .pop-btm {
+  margin-top: 12px;
+  padding-top: 19px;
+  border-top: 1px solid #E9ECF0;
+}
+body .layui-layer .layui-layer-content #pop-success .pop-btm .pop-btn {
+  display: inline-block;
+  width: 96px;
+  height: 36px;
+  line-height: 36px;
+  border: none;
+  border-radius: 2px;
+  background: #FF734C;
+  color: #fff;
+}
+body .layui-layer .layui-layer-content #pop-success .pop-btm .pop-tip {
+  margin-top: 8px;
+  padding-bottom: 20px;
+  font-size: 12px;
+  line-height: 17px;
+  color: #71797F;
+}
+body .layui-layer .layui-layer-content #pop-exist {
+  text-align: center;
+  padding-bottom: 28px;
+}
+body .layui-layer .layui-layer-content #pop-exist .pop-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #232628;
+}
+body .layui-layer .layui-layer-content #pop-exist .pop-content {
+  padding: 0 28px;
+  margin-top: 8px;
+  text-align: left;
+}
+body .layui-layer .layui-layer-content #pop-exist .pop-content p {
+  font-size: 13px;
+  line-height: 21px;
+  color: #71797F;
+}
+body .layui-layer .layui-layer-content #pop-exist .pop-btn {
+  display: inline-block;
+  width: 96px;
+  height: 36px;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 36px;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  background: #FF734C;
+}

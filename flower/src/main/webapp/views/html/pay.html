@@ -1,0 +1,571 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>提交订单成功及支付提示 - 花礼网</title>
+    <meta name="description" />
+    <meta name="keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp">
+    <link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="//img02.hua.com/pc/assets/css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/shopping.css">
+    <link  type="text/css" rel="stylesheet" href="../css/hua.css">
+    
+    <link type="text/css" rel="stylesheet" href="https://img02.hua.com/pc/assets/css/public_2020.css">
+    
+    <link type="text/css" rel="stylesheet" href="https://img02.hua.com/pc/css/savesuccess.css?317">
+    <link type="text/css" rel="stylesheet" href="https://img02.hua.com/pc/css/giftCardLayer.css?v1">
+    <style>
+        .content .order-wrapper {
+            position: relative;
+        }
+        .content .order-detail-info {
+            margin-top: 8px;
+        }
+        .order-countDown {
+            font-size: 16px;
+            color: #565656;
+        }
+            .order-countDown .red {
+                color: #FF734C;
+            }
+    </style>
+
+    <!--[if lt IE 9]>
+        <script src="//img02.hua.com/pc/assets/js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="cart-flow">
+    <!-- 顶部导航 -->
+     
+    <div class="top-nav">
+        <div class="top-nav-wrapper">
+            
+            <ul class="top-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo"><a href="/Passport/Login/?backUrl=https://www.hua.com/"
+                        rel="nofollow">你好，请登录</a><a href="/Passport/Register/" rel="nofollow">注册</a></li>
+                <!--登陆状态信息显示end-->
+                <li class="menu">
+                    <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                
+                <!--购物车信息显示start-->
+                <li class="menu">
+                    <a href="/shopping/showcart/" rel="nofollow" target="_blank">
+                        购物车
+                        <span class="text-primary" id="gwcCount">(0)</span>
+                    </a>
+                </li>
+                <!--购物车信息显示end-->
+                <li class="menu slogan">
+                    遇见花开欢迎您
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <div id="header" class="clearfix">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" class="logo-nav"></a>
+            </div>
+            
+            <div class="service serviceDefault">
+                <div class="service-item phone-400" style="">
+                    <span class="icon icon-phone"></span>
+                    <div class="service-item-info">400-819-888</div>
+                </div>
+              
+            </div>
+            
+        </div>
+    </div>
+    <!-- 头部 End -->
+    
+
+
+<div class="content">
+    <div class="order-wrapper">
+        <div class="order-icon"><img src="https://img02.hua.com/pc/Images/pc_savesuccess.png" alt="" /></div>
+        <div class="order-detail" style="width:680px">
+            <p class="order-detail-title">订单提交成功，请尽快完成支付~<span class="order-detail-orderid">订单号：382662801</span></p>
+            <p class="order-countDown" style="display:none"><text class="red" id="orderCountDown"></text>内支付，收货可返<text class="red">179</text>积分</p>
+            <p class="order-detail-info">收货信息：撒  15161076668，广东珠海市香洲区市人民政府</p>
+        </div>
+       
+    </div>
+    <div class="payment-main">
+        <div class="payment-tprice">应付金额：<span>¥179</span></div>
+        <div class="payment-ways">
+            <div class="payment-ways-container platforms">
+                <p class="payment-ways-title">平台支付</p>
+                <ul class="payment-ways-list">
+                        <li class="payment-ways-item">
+                            <a href="/Pays/Alipay/Pay?OrderID=382662801&OrderAmount=179&sign=92126b6d4e2451f0373eaef486f0b8ce" target="_blank">
+                                <img src="//img02.hua.com/images/payment/payment_ali.png" alt="支付宝支付" />
+                            </a>
+                        </li>
+                        <li class="payment-ways-item">
+                            <a href="/Pays/WeiXinPay/Pay?OrderID=382662801&OrderAmount=179&sign=fb9439d24bd2a803e1c6c51545a9b74c" target="_blank">
+                                <img src="//img02.hua.com/images/payment/payment_wx.png" alt="微信支付" />
+                            </a>
+                        </li>
+                </ul>
+            
+    </div>
+</div>
+
+<!-- 支付中弹窗 -->
+<div class="paying-pop">
+    <div class="layer-title">请在第三方支付页面完成支付</div>
+    <div class="layer-content">
+        <div class="layer-payment">
+            <div class="layer-payment-item">
+                <span>支付成功请点击</span>
+                <a class="btn-active" href="/Member/Order/">已完成付款</a>
+            </div>
+            <div class="layer-payment-item">
+                <span>遇到问题请点击</span>
+                <a class="btn-grey" href="javascript:;" onclick="CloseLayer()">重新支付</a>
+            </div>
+        </div>
+        <div class="layer-tip"><i class="mini-icon icon-info"></i>注：重新付款前，请关闭之前的付款页面，如果疑问或需要帮助，请联系客服</div>
+    </div>
+</div>
+<!-- 礼品卡弹窗 -->
+
+
+    <!--底部-->
+    <!-- 服务 -->
+    
+    <!-- 服务 End -->
+    <!-- 尾部导航 -->
+   
+    <!-- 尾部导航 End -->
+    <!-- 通用尾部 -->
+    
+    <!-- 通用尾部 End -->
+    <script type="text/javascript" src="https://img02.hua.com/pc/assets/js/commonV1.js?z1"></script>
+    <script src="//img02.hua.com/pc/js/layerpc/layer.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+            type: "POST",
+            url: "/HuaCtrler/Tel400Config",
+            async: false,
+            success: function (data) {
+                if (data.Datas.OpenTel400) {
+                    $(".phone-400").show();
+                }
+            }
+        });
+        $(function () {
+            var rmd1 = Math.random();
+            $.get("/Passport/Login/LoginState?rmd=" + rmd1, null, function (data) {
+                if (data != null && data.Logined == true) {
+                    $("#btn-login").text(data.ShowName).attr("href", "/Member/MemberCenter/");
+                    $("#btn-reg").text("退出").attr("href", "/Passport/Login/Loginout");
+                }
+                else {
+                    var loginUrl = "/Passport/Login/?backUrl=" + location.href;
+                    $("#btn-login").attr("href", loginUrl);
+                }
+            }, "json");
+            $.getJSON("/shopping/GetCartJson?rmd=" + rmd1, function (json) {    //购物车信息显示
+                if ($("#gwcCount").length > 0) {
+                    $("#gwcCount").html("(" + json.productsNum + ")");
+                }
+                if ($("#cart_num").length > 0) {
+                    $("#cart_num").html(json.productsNum);
+                }
+
+                var cartInfo = '';
+                if (json.productsNum == 0) {
+                    cartInfo = '<div class="empty">您的购物车中没有商品，<a href="/">先去选购吧</a>！</div>'
+                }
+                else {
+                    cartInfo = '<div class="cargo">'
+                    $.each(json.datas, function (index, data) {
+                        cartInfo = cartInfo + '<div class="com-list"><div class="img-box"><a href="/product/' + data.productCode + '.html" target="_blank"><img src="//img01.hua.com/uploadpic/newpic/' + data.productCode + '.jpg_80x87.jpg" width="50" height="53"></a></div><div class="title"><a href="/product/' + data.productCode + '.html" target="_blank">' + data.productName + '</a></div><div class="num">' + data.productNum + '</div><div class="price"><span class="price-sign text-primary">&yen; </span><span class="price-num text-primary strong"> ' + data.productPrice + '</span></div></div>';
+                    });
+                    cartInfo = cartInfo + '<div class="settlement"><div class="total-price"><span><strong class="text-primary">' + json.productsNum + '</strong> 件总计:</span><span class="price-sign text-primary strong">&yen; </span><span class="price-num text-primary strong"> ' + json.productsMoney + '</span></div><a href="/shopping/showcart" class="btn btn-primary btn-sm" target="_blank">去购物车结算</a></div></div>';
+                }
+                if ($("#CartInfo").length > 0) { $("#CartInfo").html(cartInfo); }
+            });
+            if ($("#pjCount").length > 0) {
+                $.get("/productpj/GetPJCount?rmd=" + rmd1, function (data) {
+                    $("#pjCount").text(data);
+                })
+            }
+        });
+    </script>
+    
+    <script type="text/javascript" src="https://img02.hua.com/pc/js/layerpc/layer.js"></script>
+    <script type="text/javascript" src="https://img02.hua.com/pc/js/pc_Login_Common.js"></script>
+    <script type="text/javascript">
+        var orderId = "382662801";
+        var orderAmount = "179";
+        var paymentMoney;
+        var cardListNum = 0; // 礼品卡数量
+        var l = ".layer ";
+        var paymentPF = $(".payment-ways-item");
+        var paymentPop = $(".paying-pop").html();
+        // 支付倒计时
+        var orderCountDown = 1729;
+        if (orderCountDown > 0) {
+            var countDown;
+            var minute = parseInt(orderCountDown / 60);
+            var second = parseInt(orderCountDown % 60);
+            var timer = setInterval(function() {
+                if (!minute && !second) {
+                    clearInterval(timer);
+                    timer = null;
+                    $(".order-countDown").hide();
+                    return;
+                };
+                if (!second) {
+                    $("#orderCountDown").html(timeSupplement(--minute) + ":59")
+                    second = 59;
+                } else {
+                    $("#orderCountDown").html(timeSupplement(minute) + ":" + timeSupplement(--second))
+                }
+                if ($(".order-countDown").css("display") === "none") $(".order-countDown").show()
+            }, 1000)
+        }
+        function timeSupplement(num) {
+            var num = +num;
+            if (num >= 10) return num;
+            return "0" + num
+        }
+
+        function openLayer(wh, ht, cont, callback, id) {  // ht:弹窗高度, cont:弹窗内容, callback:回调
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                shadeClose: true,
+                area: [wh + 'px', ht + 'px'],
+                skin: 'layer',
+                id: id || "",
+                content: cont,
+                resize: false,
+                shadeClose: false,
+                success: function () {
+                    ClickCloseLayer();   // 弹窗关闭按钮
+                    callback && callback();
+                }
+            });
+        }
+
+        function CloseLayer() {
+            layer.closeAll();
+        }
+        function ClickCloseLayer() {
+            $(".layer-close").click(function () {
+                layer.closeAll();
+            })
+        }
+
+        
+        function refreshGiftcard() {
+            $.ajax({
+                type: "post",
+                url: "/pays/GiftCardPay/DeleteUseGiftCard",
+                data: {
+                    orderId: orderId
+                }
+            });
+            $(".giftcard-list").hide();
+            $(".giftcard-list-block").text("");
+            paymentMoney = orderAmount;
+        }
+
+        
+        $(".continue-add").on("click", function () {
+            $(".giftcard-list").show();
+            $(".order-title2-num").text(++cardListNum);
+            $(".giftcard-list-block").append('<div class="giftcard-list-item"><div class="giftcard-list-line"><div class="giftcard-list-left">' + ($(".giftcard-list-item").length + 1) + '</div><div class="giftcard-list-center">' + cardCurrent.GiftCardInfo.Code + '</div><div class="giftcard-list-right">' + cardCurrent.GiftCardInfo.UseMoney + '</div></div><div class="giftcard-list-delete">删除</div></div>')
+            $(".giftcard-pop-list").hide();
+            $(".input-giftcard-info").show();
+            $(".giftcard-list").show();
+            $("#giftcardCode").val("");
+            $("#giftcardPwd").val("");
+        })
+
+        
+        $(".use-giftcard-pay").on("click", function () {
+            $.ajax({
+                type: "post",
+                url: "/pays/GiftCardPay/UseGiftCard",
+                data: {
+                    orderId: orderId
+                },
+                dataType: "json",
+                success: function (res) {
+                    hideGiftcardPop();
+                    if (!res.DataStatus) {
+                        layer.open({
+                            content: '<div class="hualayer-title">支付成功！</div></p>',
+                            className: "hualayer",
+                            btn: ['确定'],
+                            yes: function () {
+                                window.location.href = "/Pays/GiftCardPay/Result?OrderId=" + orderId + "&OrderAmount=" + orderAmount;
+                            }
+                        });
+                    } else {
+                        layer.msg(res.Datas.Message);
+                    }
+                }
+            });
+        })
+
+        $(".giftcard-list").on("click", '.giftcard-list-delete', function () {
+            var _gthis = $(this);
+            $.ajax({
+                type: "post",
+                url: "/pays/GiftCardPay/DeleteUseGiftCard",
+                data: {
+                    code: _gthis.siblings(".giftcard-list-line").find(".giftcard-list-center").text()
+                },
+                success: function () {
+                    console.log(_gthis)
+                    _gthis.parents(".giftcard-list").find(".order-title2-num").text(--cardListNum);
+                    paymentMoney = paymentMoney + Number(_gthis.parents(".giftcard-list-item").find(".giftcard-list-right").text());
+                    _gthis.parents(".giftcard-list-item").remove();
+                    console.log($(".giftcard-list .giftcard-list-item").length);
+
+                    if ($(".giftcard-list .giftcard-list-item").length) {
+                        $(".giftcard-list .giftcard-list-item").each(function (index) {
+                            console.log($(this))
+                            $(this).find(".giftcard-list-left").text(index + 1)
+                        })
+                    } else {
+                        $(".giftcard-list").hide()
+                        $(".giftcard-list-block").text("");
+                        paymentMoney = orderAmount;
+                        cardListNum = 0;
+                    }
+                }
+            });
+
+        })
+
+        $("#lpkPayBtn").on("click", function () {
+            var code = $("#giftcardCode").val();
+            var password = $("#giftcardPwd").val();
+            if (!code || code.length != 10) {
+                layer.msg("请输入10位礼品卡编号");
+                return false;
+            }
+            if (!password || password.length > 8) {
+                layer.msg("请输入8位礼品卡密码");
+                return false;
+            }
+            $.ajax({
+                type: "post",
+                url: "/pays/GiftCardPay/ValidGiftCard",
+                data: {
+                    code: code,
+                    password: password,
+                    orderId: orderId,
+                    money: paymentMoney
+                },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    if (data.Status == "0") {
+                        if (data.DataStatus == "0") {   // 验证成功
+                            var goAddCard = true;
+                            $(".giftcard-box .giftcard-list-block .giftcard-list-center").each(function () {
+                                if ($(this).text() == code) {
+                                    goAddCard = false;
+                                    return;
+                                }
+                            })
+                            if (goAddCard) {
+                                cardCurrent = data.Datas;
+                                LiPinKaPayHandler(data.Datas);
+                            } else {
+                                layer.msg("您的礼品卡已在待使用列表，请勿重复添加！");
+                                $("#giftcardCode").val("");
+                                $("#giftcardPwd").val("");
+                            }
+                        } else {
+                            layer.msg(data.Datas.Message);
+                        }
+                    } else {
+                        layer.msg(data.ErrMsg);
+                    }
+                }
+            });
+        })
+
+        function hideGiftcardPop() {
+            $(".shadow-mask").hide();
+            $(".giftcard-pop").hide();
+            $("#giftcardCode").val("");
+            $("#giftcardPwd").val("");
+        }
+
+        function closeGiftcardPop() {
+            if ($(".giftcard-list-block .giftcard-list-item").length) {
+                // 询问框
+                layer.open({
+                    content: '<div class="hualayer-title">确定退出礼品卡支付?</div><p class="hualayer-desc">已添加的礼品卡将被清空</p>',
+                    className: "hualayer",
+                    title: false,
+                    closeBtn: 0,
+                    btn: ['确定', '取消'],
+                    yes: function (index) {
+                        refreshGiftcard();
+                        $(".shadow-mask").hide();
+                        $(".giftcard-pop").hide();
+                        $("#giftcardCode").val("");
+                        $("#giftcardPwd").val("");
+                        layer.close(index);
+                    },
+                    no: function (index) {
+                        layer.close(index);
+                    }
+                });
+            } else {
+                $(".shadow-mask").hide();
+                $(".giftcard-pop").hide();
+                $("#giftcardCode").val("");
+                $("#giftcardPwd").val("");
+                layer.closeAll();
+            }
+        }
+
+       
+
+       
+       
+
+       
+
+        dataLayer = [{"transactionId":"382662801","transactionAffiliation":"花礼网","transactionTotal":179.0,"transactionTax":0.0,"transactionShipping":0.0,"transactionProducts":[{"sku":"9012505","name":"母爱","category":"鲜花","price":179.0,"quantity":1}]}];
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script type="text/javascript">
+        function IEVersion() {
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+            var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+            var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+            if (isIE) {
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                if (fIEVersion == 7) {
+                    return 7;
+                } else if (fIEVersion == 8) {
+                    return 8;
+                } else if (fIEVersion == 9) {
+                    return 9;
+                } else if (fIEVersion == 10) {
+                    return 10;
+                } else {
+                    return 6;//IE版本<=7
+                }
+            } else if (isEdge) {
+                return 'edge';//edge
+            } else if (isIE11) {
+                return 11; //IE11
+            } else {
+                return -1;//不是ie浏览器
+            }
+        }
+        var bVersion = IEVersion();
+        try {
+            if (bVersion != 8) {
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');
+            }
+        }
+        catch (e) { }
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS4PTHC"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script type='text/javascript'>
+        $(function () {
+            try {
+                if (bVersion != 9 && bVersion != 8) {
+                    (function (m, ei, q, i, a, j, s) {
+                        m[i] = m[i] || function () {
+                            (m[i].a = m[i].a || []).push(arguments)
+                        };
+                        j = ei.createElement(q),
+                            s = ei.getElementsByTagName(q)[0];
+                        j.async = true;
+                        j.charset = 'UTF-8';
+                        j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+                        s.parentNode.insertBefore(j, s);
+                    })(window, document, 'script', '_MEIQIA');
+                    _MEIQIA('entId', 111117);
+                    $.post("/Home/MeiQiaVisitLog", null, function (data) {
+                        _MEIQIA('clientId', data);
+                    });
+                    _MEIQIA('withoutBtn');
+                }
+            }
+            catch (e) { }
+        })
+
+        function LayerOpen(title, url, wdith, height) {
+            layer.open({
+                type: 2,
+                title: title,
+                shadeClose: true,
+                shade: 0,
+                offset: 'rb', //右下角弹出
+                area: [wdith + 'px', height + 'px'],
+                content: url //iframe的url
+            });
+        }
+
+      
+    </script>
+
+    <script type="text/javascript">
+
+        $('#bindModal').on('hidden.bs.modal', function () {
+            $("#attBindPage").attr("src", "");
+        });
+        //绑定窗口操作结束
+        var appAuthorizedType = -1;
+        if (appAuthorizedType && appAuthorizedType>0) {
+            DoBind();
+        }
+        function DoBind() {
+            try {
+                $('#consigneeModal').modal('hide');
+                $('#loginModal').modal('hide');
+                $('#bindModal').modal('show');
+                $("#attBindPage").attr('src', '/Passport/Login/WinLoginBind?appAuthorizedType=' + appAuthorizedType)
+            }
+            catch (err) {
+            }
+        }
+
+    </script>
+</body>
+</html>

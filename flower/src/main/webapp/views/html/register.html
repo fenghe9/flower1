@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>会员注册</title>
+    <!-- <meta name="description" content="花礼网-中国鲜花网领先品牌,Hua.com专注鲜花速递服务10年,销量稳居鲜花礼品类网站首位！鲜花网提供24小时订鲜花，同城送花、异地送花服务,网上订花后最快3小时即可将鲜花快递上门,送花网站覆盖中国900多城市！" />
+    <meta name="keywords" content="鲜花礼品网,鲜花,鲜花网,鲜花快递,网上订花送花,中国鲜花网,鲜花礼品,网上订花,送花网站" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit|ie-comp"> -->
+    <link rel="stylesheet" href="../css/hua.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    
+        <script type="text/javascript" src="/home/CheckAgent"></script>
+    <link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    
+        <link type="text/css" rel="stylesheet" href="//img02.hua.com/pc/assets/css/common.css?v4">
+            <link type="text/css" rel="stylesheet" href="https://img02.hua.com/pc/assets/css/public_2020.css"> 
+  
+    <!--[if lte IE 9]>
+    <style>
+        .pwd-input{
+            display:none;
+        }
+    </style>
+    <![endif]-->
+    <style>
+        body {
+            color: #737373;
+        }
+    </style>
+
+    <style>
+       
+    </style>
+    <!--[if lt IE 9]>
+        <script src="//img02.hua.com/pc/assets/js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="home">
+    
+        <!-- 顶部导航 -->
+    <div class="top-nav">
+        <div class="top-nav-wrapper">
+            
+            <ul class="top-nav-r">
+                
+                <li class="menu slogan">
+                    遇见花开欢迎您
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <div id="header" class="clearfix">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" class="logo-nav"></a>
+            </div>
+            <div class="search-box">
+                <form name="i_search" method="get" action="/search/">
+                    <div class="search-box-group">
+                        <div class="search-box-icon">
+                            <span class="icon icon-search"></span>
+                        </div>
+                        <input name="keyword" type="text" class="search-box-input" placeholder="商品搜索">
+                        <span class="search-box-btn">
+                            <button class="btn btn-primary" type="button" onclick="this.form.submit()">搜索</button>
+                        </span>
+                    </div>
+                </form>
+                
+            </div>
+            
+            
+        </div>
+    </div>
+    <!-- 头部 End -->
+
+            
+
+
+<section class="login-wrapper">
+    <div class="container">
+        <div class="login-box">
+            <ul class="login-tabs">
+                <li class="register-byphone active" >手机账号注册</li>
+                
+            </ul>
+            <div id="form1">
+                <!-- 手机注册 -->
+                <div id="register-phone" class="login-form register-form register-form-tel">
+                    <div class="tel-box">
+                        <div class="input-box">
+                            <span class="icon icon-iphone"></span>
+                            <input id="phone" name="phone" class="account" type="text" placeholder="请输入手机" autocomplete="off">
+                        </div>
+                        <p class="tips"></p>
+                    </div>
+                    <div id="phoneVerifyBox" class="verify-box verify-box1">
+                        <div class="input-box">
+                            <input id="phonePicCode" name="phonePicCode" class="verify" type="text" autocomplete="off" placeholder="请输入验证码">
+                            <a href="javascript:void(0)" onclick="javascript:RefreshImage2('imgCaptcha1','phone')"><img id="imgCaptcha1" src="/ImgAuthenCode/index"></a>
+                        </div>
+                        <p class="tips"></p>
+                    </div>
+                    <div class="code-box">
+                        <div class="input-box">
+                            <span class="icon icon-message"></span>
+                            <input id="phoneCode" name="phoneCode" class="pwd" type="text" autocomplete="off" placeholder="请输入短信验证码">
+                            <span id="getcode" class="get-code">获取验证码</span>
+                            <div id="prompt_info" style="display:none;"><span id="regetcode">90</span>秒后重新发送</div>
+                        </div>
+                        <p class="tips"></p>
+                    </div>
+                    <div class="pwd-box pwd-box1">
+                        <div class="input-box">
+                            <span class="icon icon-unlocked"></span>
+                            <!--[if lte IE 9]>
+                            <div class="cover-pwd" data-placeholder="请输入密码">请输入密码</div>
+                            <input id="phonePassWord" name="phonePassWord" class="pwd" type="password" autocomplete="off">
+                            <![endif]-->
+                            <input id="phonePassWord" name="phonePassWord" class="pwd pwd-input" type="text" placeholder="请输入密码" onfocus="this.type='password'" autocomplete="off">
+                        </div>
+                        <p class="tips"></p>
+                    </div>
+                    <input class="form-btn login-btn" type="button" value="注册" onClick="phoneRegister();">
+                </div>
+                <!-- 邮箱注册 -->
+    
+                <div class="bottom-box">
+                    <ul class="other-login-ways">
+                        
+                        <li class="extra-r"><a href="/Passport/Login/">登录账号<i class="icon icon-arrow-right-active"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="pop-success" style="display:none;">
+    <i class="icon icon-success"></i>
+    <p class="pop-title">注册成功</p>
+    <div class="pop-content">
+        <p>账号<span id="pop-success-username"></span>已注册成功。</p>
+        
+    </div>
+    <div class="pop-btm">
+        <a class="pop-btn" href="/">继续浏览</a>
+        <p class="pop-tip"><span id="pop-success-countdown"></span>s后将自动跳转…</p>
+    </div>
+</div>
+<div id="pop-exist" style="display:none;">
+    <p class="pop-title">账号已存在</p>
+    <div class="pop-content">
+        <p><span id="pop-exist-username"></span>已被注册过,请重新检查账号或直接登录。</p>
+    </div>
+    <a class="pop-btn" href="/Passport/Login/">去登录</a>
+</div>
+       
+        <script type="text/javascript" src="https://img02.hua.com/pc/assets/js/commonV1.js?z1"></script>
+            <script type="text/javascript" src="//img02.hua.com/pc/js/statesandright.js"></script>
+    
+    <script type="text/javascript" src="https://img02.hua.com/pc/js/mailautocomplete.js"></script>
+    <script type="text/javascript" src="https://img02.hua.com/pc/js/layerpc/layer.js"></script>
+    <script type="text/javascript" src="https://img02.hua.com/pc/js/geetest/gt.js"></script>
+    <script type="text/javascript" src="https://img02.hua.com/pc/assets/js/verifyMethodSwitch.js?v3"></script>
+    <script type="text/javascript" src="https://img02.hua.com/pc/assets/js/pc_Login_CommonV2.js?v3"></script>
+    <script>
+
+        function analytics(pageName1, actionType) {
+
+            try {
+                if (!actionType) {
+                    actionType = "click";
+                }
+                $.ajax({
+                    url: "/huactrler/AnalyticsV1",
+                    type: "post",
+                    data: {
+                        pageName: pageName1,
+                        actionType: actionType
+                    }
+                });
+            } catch (e) {
+
+            }
+            return true;
+        };
+
+        $(function () {
+            // 表单切换
+            var Tabs = $('.login-tabs li');  // Tab
+            var phoneTab = $(".register-byphone");
+            var mailTab = $(".register-bymail");
+            var phoneForm = $("#register-phone");
+            var mailForm = $("#register-mail");
+            phoneTab.click(function () {
+                Tabs.removeClass("active");
+                $(this).addClass("active");
+                phoneForm.show();
+                mailForm.hide();
+                closeAllImgValidCode();
+            })
+            mailTab.click(function () {
+                Tabs.removeClass("active");
+                $(this).addClass("active");
+                mailForm.show();
+                phoneForm.hide();
+                closeAllImgValidCode();
+            })
+        });
+
+        //回车键
+        document.onkeydown = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 13) {
+                // 手机注册
+                var isPhonePwdFocus = $("#phonePassWord").is(":focus");
+                
+                // Form:手机注册判断
+                if (isPhonePwdFocus) {
+                    phoneRegister();
+                }
+               
+            }
+        };
+
+        var counter = 0;
+        var interval = null;
+
+        // 短信验证码倒计时
+        function intervalFunc() {
+            if (counter > 90) {
+                counter = 0;
+                $("#regetcode").html("");
+                $("#getcode").show();
+                $("#prompt_info").hide();
+                window.clearInterval(interval);
+            } else {
+                $("#regetcode").html((90 - counter).toString());
+            }
+            counter = counter + 1;
+        }
+
+        // 弹窗：账号已存在
+        function existPop() {
+            layer.open({
+                type: 1,
+                closeBtn: 1, //显示关闭按钮
+                anim: 2,
+                shadeClose: true, //开启遮罩关闭
+                title: ' ',
+                content: $('#pop-exist'),
+                area: '268px',
+                offset: '262px',
+                btnAlign: 'c',
+                shade: [0.5, '#B4BABF'],
+                resize: false,
+                move: false
+            });
+        }
+        // 弹窗：注册成功
+        function successPop() {
+            layer.open({
+                type: 1,
+                closeBtn: 1, //显示关闭按钮
+                anim: 2,
+                shade: true, //开启遮罩关闭
+                title: ' ',
+                content: $('#pop-success'),
+                area: '268px',
+                offset: '200px',
+                btnAlign: 'c',
+                shade: [0.5, '#B4BABF'],
+                resize: false,
+                move: false
+            });
+        }
+
+        // 判断账户是否已注册
+        function IsExistAccount(a, callback) {
+            $.ajax({
+                type: "Post",
+                url: "/Passport/Register/IsExistAccount",
+                data: {
+                    account: a
+                },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    if (data.Status == "0") {
+                        var isExist = data.Datas.IsExistAccount;
+                        callback && callback(isExist);
+                    } else {
+                        var errClass = (/^\s*1\d{10}\s*$/gi).test(a) ? ".tel-box" : ".email-box"
+                        ShowTips(data.ErrMsg, errClass);
+                    }
+                }
+            });
+        }
+        var geetestLock = false;
+        var showImgValidCode1 = false;
+        // 手机注册：获取短信验证码
+        $("#getcode").click(function () {
+            var interval = null;
+            HideTips();
+            if (!Check_Phone("phone", ".tel-box")) return false;
+            var phone = $("#phone").val().trim();
+            IsExistAccount(phone, function (b) {
+                if (b) {
+                    $("#pop-exist-username").html("手机号" + phone);
+                    existPop();
+                } else {
+                    var imgCode = Check_Code("phonePicCode", ".verify-box1");
+                    var data = {
+                        mobile: phone,
+                        imgCode: imgCode
+                    };
+                    if (!showImgValidCode1 && (imgCode == undefined || imgCode == "")) {
+                        verifyMethodSwitch(data,sendSms,'phoneVerifyBox');
+                    }
+                    else {
+                        sendSms(data)
+                    }
+                }
+            });
+        })
+        // 短信验证码发送
+        function sendSms(data) {
+            $.ajax({
+                type: "Post",
+                url: "/SmsAuthenCode/SendV3",
+                data: data,
+                dataType: "json",
+                async: false,
+                success: function (res) {
+                    var data = res.Datas;
+                    var class1 = ".code-box";
+                    if (res.Status == "0" && res.DataStatus == 0) {       // 发送成功
+                        ShowTips("<span style='color:#232628'>验证码已发送请查收</span>", ".code-box");
+                        counter = 0;
+                        $("#getcode").hide();
+                        $("#regetcode").html("90");
+                        $("#prompt_info").show();
+                        $("#phoneCode").focus();
+                        interval = window.setInterval(intervalFunc, 1000);
+                    }
+                    else {
+                        if (res.DataStatus == 1026) {      // 需要图片验证码
+                            $("#phoneVerifyBox").show();
+                            $("#phonePicCode").focus();
+                            class1 = ".verify-box1";
+                        }
+                        else if (res.DataStatus == 1002) {     // 手机号格式不正确
+                            $("#phone").focus();
+                            class1 = ".phone-box";
+                        }
+                        else if (res.DataStatus == 1012) {     // 图片验证码不正确
+                            $("#phoneVerifyBox").show();
+                            RefreshImage2('imgCaptcha1','phone');
+                            $("#phonePicCode").focus();
+                            class1 = ".verify-box1";
+                        }
+                        else if (res.DataStatus == 1003) {     // 短信验证码发送过于频繁
+                            class1 = ".code-box";
+                        }
+                        if (res.DataStatus != 0) {
+                            ShowTips(res.ErrMsg || data.Message, class1);
+                        }
+                    }
+                }
+            });
+        }
+
+        // ********** 手机注册逻辑begin **********
+        function phoneRegister() {
+            var successInterval = null;
+            HideTips();
+
+            // 必须：手机、短信验证码、密码
+            if (!Check_Phone("phone", ".tel-box")) return false;   // 手机
+            if (!Check_SmsCode("phoneCode", ".code-box")) return false;  // 短信验证码
+            if (!Check_Password("phonePassWord", ".pwd-box1")) return false;   // 密码
+
+            var phone = $("#phone").val().trim();
+            var code = $("#phoneCode").val().trim();
+            var pwd = $("#phonePassWord").val().trim();
+            var imgCode = Check_Code("phonePicCode", ".verify-box1");     // 图形验证码，非必填
+
+            $.ajax({
+                type: "Post",
+                url: "/Passport/Register/MobileRegisterV1",
+                data: {
+                    mobile: phone,
+                    password: pwd,
+                    action: "mobileRegister",
+                    email: "",
+                    smsValidCode: code,
+                    picValidCode: imgCode
+                },
+                dataType: "json",
+                async: false,
+                success: function (res) {
+                    var data = res.Datas;
+                    if (res.Status == "0" && res.DataStatus == 0) {   // 注册成功
+                        $("#pop-success-username").html(phone);
+                        successPop();
+                        // 3秒自动跳转首页
+                        var counter = 3;
+                        var popCountdown = $("#pop-success-countdown");
+                        popCountdown.html(counter);
+                        successInterval = window.setInterval(function () {
+                            if (counter > 0) {
+                                counter--;
+                                popCountdown.html(counter);
+                            }
+                            else {
+                                window.clearInterval(successInterval);
+                                location.href = data.RedirectUrl;
+                            }
+                        }, 1000);
+                    }
+                    else if (res.DataStatus == 1511) {      // 手机号已存在
+                        $("#pop-exist-username").html("手机号" + phone);
+                        existPop();
+                    }
+                    else if (res.DataStatus == 1002) {     // 无效的手机号
+                        ShowTips("手机号格式不正确，请检查后重新输入", ".tel-box");
+                        $("#phone").focus();
+                    }
+                    else if (res.DataStatus == 1005) {     // 短信验证码不正确
+                        ShowTips("短信验证码有误", ".code-box");
+                        $("#phoneCode").focus();
+                    }
+                    else if (dres.DataStatus == 1005) {     // 密码不能少于6位
+                        ShowTips("密码不能少于6位", ".pwd-box1");
+                        $("#phonePassWord").focus();
+                    }
+
+                }
+            });
+        }
+        // ********** 手机注册逻辑end **********
+
+       
+    </script>
+
+        <script src="//img02.hua.com/pc/js/layerpc/layer.js"></script>
+            <script type="text/javascript">
+            var userId = 0;
+            function reqUrlParam(paras) {
+                var url = location.href;
+                var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+                var paraObj = {}
+                for (i = 0; j = paraString[i]; i++) {
+                    paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+                }
+                var returnValue = paraObj[paras.toLowerCase()];
+                if (typeof (returnValue) == "undefined") {
+                    return "";
+                } else {
+                    return returnValue;
+                }
+            }
+            function setLocalStoreHua(k, v) {
+                try {
+                    if (localStorage != null) {
+                        localStorage.setItem(k, v);
+                    }
+                } catch (ex) { }
+            }
+            function getLocalStoreHua(k) {
+                try {
+                    if (localStorage != null) {
+                        var v1 = localStorage.getItem(k);
+                        localStorage.removeItem(k);
+                        return v1;
+                    }
+                } catch (ex) { }
+                return "";
+            }
+            var lsPerfKey = "home/GetProductListPrice";
+            function getProductPrice() {
+                var dataPps = "";
+                $("span[data-pp]").each(function (index, data) {
+                    dataPps = dataPps + $(this).attr("data-pp") + ",";
+                })
+                if (dataPps.length > 0) {
+                    var perf1 = getLocalStoreHua(lsPerfKey);
+                    var dts = new Date();
+                    $.ajax({
+                        type: "POST", url: "/home/GetProductListPrice",
+                        data: { itemcodes: dataPps, perf: perf1 },
+                        timeout: 60000, dataType: 'json',
+                        success: function (res) {
+                            if (res.DataStatus == 200 && res.Status == '0') {
+                                if (res.Datas.ProductPrices.length == 0) {
+                                    return false;
+                                }
+                                for (var i = 0, len = res.Datas.ProductPrices.length; i < len; i++) {
+                                    var temp = res.Datas.ProductPrices[i];
+                                    $("span[data-pp='" + temp.ItemCode + "']").text(temp.Price);
+                                }
+                            }
+                            else { }
+                        },
+                        complete: function (res) {
+                            var dte = new Date();
+                            var useMs = dte.getTime() - dts.getTime();
+                            //var resTxt = "v0,"+res.readyState + "," + res.status + "," + res.statusText;
+                            var resTxt = "v0," + res.status + "," + dts.getTime() + "," + useMs;
+                            setLocalStoreHua(lsPerfKey, resTxt);
+                            //console.log("AjaxReq性能", resTxt);
+                        }
+                    });
+                }
+            }
+            function setCurUrlClass() {
+                // css : class = "color_tj"
+                var pathname1 = window.location.pathname;
+                $("a[href='" + pathname1 + "'").addClass("color_tj");
+            }
+            getProductPrice();
+
+            function addHuaPid() {
+                try {
+                    var path = encodeURIComponent(window.location.pathname);
+                    $("a[data-link]").each(function (index, data) {
+                        if ($(this).attr("href").indexOf("huaPid=") == -1) {
+                            var href = $(this).attr("href") + "?huaPid=" + path + "-" + $(this).attr("data-link");
+                            $(this).attr("href", href);
+                        }
+                    })
+                }
+                catch (e) {
+                    console.log(e);
+                }
+            }
+            addHuaPid();
+
+            $(function () {
+                $(".menu-dropdown").hover(function () {
+                    $(this).addClass("open");
+                }, function () {
+                    $(this).removeClass("open")
+                })
+                $.get("/Home/GetLoginUserId", null, function (data) {
+                    userId = data;
+                }, "json");
+
+                $("#header-chat,#kefu,#kefu1").click(function (e) {
+                    e.preventDefault();
+                    //$("#MEIQIA-BTN").click();
+                    //_MEIQIA('showPanel');
+                    openChatWindow();
+                });
+
+                if ($("#pjCount").length > 0) {
+                    $.get("/productpj/GetPJCount", function (data) {
+                        $("#pjCount").text(data);
+                    });
+                }
+            });
+        </script>
+            <script>
+            $(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/HuaCtrler/Tel400Config",
+                    async: false,
+                    success: function (data) {
+                        if (data.Datas.OpenTel400) {
+                            $(".phone-400").show();
+                            $("header .service a").css("border-left", "1px solid #d9d9d9")
+                        } else {
+                            $(".phone-400").remove();
+                        }
+                    }
+                });
+            });
+        </script>
+    <!--Hua.com统计-->
+    <script type="text/javascript">
+        function getParameters(paramName) {
+            var returnValue = "";
+            var kv = location.search.slice(1).split("&");
+            for (var i = 0; i < kv.length; i++) {
+                var index = kv[i].indexOf("=");
+                if (index == -1) {
+                    continue;
+                }
+                var groupParam = kv[i].split("=")
+                if (groupParam[0] == paramName) {
+                    if (returnValue.length > 0) {
+                        returnValue = returnValue + "|" + groupParam[1];
+                    } else {
+                        returnValue = groupParam[1];
+                    }
+                }
+            }
+            return returnValue;
+        }
+        (function () {
+            var locationUrl = location.href;
+            var refererUrl = document.referrer;
+            if (locationUrl.length > 1500) {
+                locationUrl = locationUrl.substring(0, 1500);
+            }
+            if (refererUrl.length > 100) {
+                refererUrl = refererUrl.substring(0, 100);
+            }
+            var apiurl = "/huactrler/hm?lt=" + (+new Date()) + "&sid=" + getParameters('sid') + "&u_id=" + getParameters('u_id') + "&huaPid=" + getParameters('huaPid');
+            apiurl = apiurl + "&url=" + encodeURIComponent(locationUrl) + "&urlreferer=" + encodeURIComponent(refererUrl);
+            var img = new Image;
+            img.onload = img.onerror = img.onabort = function () { }
+            img.src = apiurl;
+        })();
+    </script>
+    <!--百度统计-->
+    
+    <script type="text/javascript">
+        function IEVersion() {
+            try {
+                var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+                var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+                var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+                var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+                if (isIE) {
+                    var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                    reIE.test(userAgent);
+                    var fIEVersion = parseFloat(RegExp["$1"]);
+                    if (fIEVersion == 7) {
+                        return 7;
+                    } else if (fIEVersion == 8) {
+                        return 8;
+                    } else if (fIEVersion == 9) {
+                        return 9;
+                    } else if (fIEVersion == 10) {
+                        return 10;
+                    } else {
+                        return 6;//IE版本<=7
+                    }
+                } else if (isEdge) {
+                    return 'edge';//edge
+                } else if (isIE11) {
+                    return 11; //IE11
+                } else {
+                    return -1;//不是ie浏览器
+                }
+            }
+            catch (e) {
+                return -1;
+            }
+        }
+        var bVersion = IEVersion();
+    </script>
+    <!-- Google Tag Manager -->
+    <script type="text/javascript">
+        try {
+            if (bVersion != 8) {
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-KS4PTHC');
+            }
+        }
+        catch (e) { }
+    </script>
+    <!-- End Google Tag Manager -->
+       
+
+            
+
+        </script>
+            <script type="text/javascript">
+
+        $('#bindModal').on('hidden.bs.modal', function () {
+            $("#attBindPage").attr("src", "");
+        });
+        //绑定窗口操作结束
+        var appAuthorizedType = -1;
+        if (appAuthorizedType && appAuthorizedType>0) {
+            DoBind();
+        }
+        function DoBind() {
+            try {
+                $('#consigneeModal').modal('hide');
+                $('#loginModal').modal('hide');
+                $('#bindModal').modal('show');
+                $("#attBindPage").attr('src', '/Passport/Login/WinLoginBind?appAuthorizedType=' + appAuthorizedType)
+            }
+            catch (err) {
+            }
+        }
+
+        </script>
+</body>
+</html>
